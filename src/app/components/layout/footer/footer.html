@@ -1,1 +1,14 @@
-<small>&copy; {{ currentYear }} While In Sofia. All rights reserved.</small>
+<div class="social">
+  @for (link of socialLinks; track link) {
+  <a href="{{ link.url }}" target="_blank" rel="noopener">
+    @if (link.customIcon) {
+      <mat-icon svgIcon="{{ link.customIcon }}"></mat-icon>
+    } @else {
+      <mat-icon>{{ link.icon }}</mat-icon>
+    }
+  </a>
+  }
+</div>
+<div class="credits">
+  <small>&copy; {{ currentYear }} While In Sofia. All rights reserved.</small>
+</div>

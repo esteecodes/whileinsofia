@@ -11,7 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   selector: 'app-root',
   imports: [Header, Footer, RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('While In Sofia');
@@ -20,10 +20,41 @@ export class App {
   http = inject(HttpClient);
 
   constructor() {
-    // Register custom SVG icons
     this.iconRegistry.addSvgIcon(
       'whileinsofia',
       this.sanitizer.bypassSecurityTrustResourceUrl('./icons/whileinsofia.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'linkedin',
+      this.sanitizer.bypassSecurityTrustResourceUrl('./icons/linkedin.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'x',
+      this.sanitizer.bypassSecurityTrustResourceUrl('./icons/x.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'youtube',
+      this.sanitizer.bypassSecurityTrustResourceUrl('./icons/youtube.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'instagram',
+      this.sanitizer.bypassSecurityTrustResourceUrl('./icons/instagram.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'facebook',
+      this.sanitizer.bypassSecurityTrustResourceUrl('./icons/facebook.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'tiktok',
+      this.sanitizer.bypassSecurityTrustResourceUrl('./icons/tiktok.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'whatsapp',
+      this.sanitizer.bypassSecurityTrustResourceUrl('./icons/whatsapp.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'mail',
+      this.sanitizer.bypassSecurityTrustResourceUrl('./icons/mail.svg')
     );
   }
 }

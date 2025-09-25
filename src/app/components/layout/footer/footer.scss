@@ -1,11 +1,26 @@
 :host {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.2rem;
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
 
-  small {
-    opacity: 0.8;
+  .social {
+    display: flex;
+    gap: 0.5rem;
+
+    mat-icon {
+      height: 1.3rem;
+      width: 1.3rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  .credits {
+    small {
+      opacity: 0.8;
+    }
   }
 }
